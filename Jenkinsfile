@@ -5,7 +5,6 @@ pipeline{
         stage('checkout'){
             steps{
                 git branch: 'master', url: 'https://github.com/MaxCCC/temp.git'
-                //checkout scm
             }
         }
         
@@ -14,7 +13,7 @@ pipeline{
                 changeset "*.yaml" 
             }
             steps{
-                echo "De file did change in the last commit (SCM checking)"
+                echo "The file did change in the last commit (SCM checking)"
             }
         }
     }
